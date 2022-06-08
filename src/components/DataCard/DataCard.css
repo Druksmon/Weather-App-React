@@ -1,0 +1,100 @@
+.data-card {
+    width: 85%;
+    min-width: 14.375rem;
+    height: 10rem;
+    border-radius: 10px;
+    background: rgb(156,156,156);
+    background: linear-gradient(86deg, rgb(201, 201, 201) 0%, rgba(255,255,255,1) 47%, rgb(201, 201, 201) 100%);
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.32),
+    -20px -20px 60px rgba(164, 164, 164, 0.82);
+    padding: 1.25rem 1.563rem;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1;
+}
+
+.data-card h1 {
+    font-size: 3.125rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+.data-card p {
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+
+.principal-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.principal-data img {
+    border-radius: 0.375rem;
+    position: absolute;
+    top: -1.563rem;
+    width: 6.25rem;
+}
+
+.icon-data-box {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.extra-data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: lighter;
+}
+
+
+.feels-like,
+.wind,
+.humidity {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: black;
+
+}
+
+
+/*RESPONSIVE */
+
+
+@media only screen and (max-width: 320px) {
+    .data-card{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .data-card h1 {
+        font-size: 2.188rem;
+    }
+    .data-card p {
+        font-size: 0.875rem;
+    }
+    .principal-data img {
+        width: 5rem;
+    }
+    .data-card {
+        padding: 10px 20px;
+        height: 8.125rem;
+    }
+}
+
