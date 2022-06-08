@@ -7,7 +7,7 @@ export const ApiProvider = ({children}) => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState('');
     const [imgBackground, setImgBackground] = useState(null);
-    const description = data?.weather?.[0].main;
+    const description = data?.weather?.[0].description;
 
 
     let loader = true;
@@ -35,7 +35,7 @@ export const ApiProvider = ({children}) => {
         if (description === undefined
         ) {
         } else {
-            const url = `https://source.unsplash.com/1920x1080/?${location}`
+            const url = `https://source.unsplash.com/1920x1080/?${description}`
             setImgBackground(url)
         }
     }, [data]);
