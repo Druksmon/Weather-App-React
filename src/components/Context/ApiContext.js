@@ -29,24 +29,19 @@ export const ApiProvider = ({children}) => {
             callApi()
         }
     }
-
     // ADD BACKGROUND
     useEffect(() => {
-        if (description === undefined
-        ) {
-        } else {
-            let Random = Math.floor(Math.random() * 5);
-            const url = `https://source.unsplash.com/1920x1080/?${description}&${Random}`
-            setImgBackground(url)
-        }
+        let Random = Math.floor(Math.random() * 5);
+        const url = `https://source.unsplash.com/1920x1080/?${description}`
+        setImgBackground(url)
     }, [data]);
-
 
     // PREVENT UNDEFINED VALUES
     if (description === undefined) {
         loader = true
     } else {
     }
+    
 
     return (
         <ApiContext.Provider value={{data, setLocation, callApi, handleKeyDown, imgBackground, loader}}>
